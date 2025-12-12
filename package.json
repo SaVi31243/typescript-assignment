@@ -1,0 +1,11 @@
+{
+  "name": "typescript-assignment",
+  "version": "1.0.0",
+  "description": "Навчальний проєкт на TypeScript",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
