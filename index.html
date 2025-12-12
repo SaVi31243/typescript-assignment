@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>TypeScript Interactive Page</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Additional custom styles */
+    #scrollBtn {
+      display:none;
+      position:fixed;
+      bottom:20px;
+      right:30px;
+      z-index:99;
+    }
+  </style>
+</head>
+<body id="app">
+
+<!-- Navbar -->
+<header class="w3-top">
+  <div class="w3-bar w3-theme-d2 w3-large">
+    <a href="#home" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home"></i> Home</a>
+    <a href="#team" class="w3-bar-item w3-button w3-hide-small">Team</a>
+    <a href="#posts" class="w3-bar-item w3-button w3-hide-small">Posts</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+    <a href="javascript:void(0)" id="openModalBtn" class="w3-bar-item w3-button w3-right">Open Modal</a>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="w3-display-container" id="home" style="margin-top:48px">
+  <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1350&q=80" 
+       alt="Nature" style="width:100%;max-height:500px;">
+  <div class="w3-display-middle w3-text-white">
+    <h1 class="w3-jumbo">Welcome</h1>
+    <p class="w3-large">This page demonstrates a TypeScript-powered interactive template.</p>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section class="w3-container w3-center w3-padding-64" id="team">
+  <h2>Our Team</h2>
+  <p>Meet the team members:</p>
+  <div class="w3-row"><br>
+    <div class="w3-quarter">
+      <img src="https://www.w3schools.com/w3images/team2.jpg" alt="Person" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>John</h3>
+      <p>Designer</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.w3schools.com/w3images/team1.jpg" alt="Person" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Rebecca</h3>
+      <p>Developer</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.w3schools.com/w3images/team3.jpg" alt="Person" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Kai</h3>
+      <p>Manager</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.w3schools.com/w3images/team4.jpg" alt="Person" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Jane</h3>
+      <p>Support</p>
+    </div>
+  </div>
+</section>
+
+<!-- Posts Section (Loaded via Fetch) -->
+<section class="w3-container w3-padding-64 w3-light-grey" id="posts">
+  <h2>Latest Posts</h2>
+  <p>Data loaded from JSONPlaceholder:</p>
+  <div id="postsContainer" class="w3-row-padding"></div>
+</section>
+
+<!-- Contact Section -->
+<section class="w3-container w3-padding-64" id="contact">
+  <h2>Contact Us</h2>
+  <p>Questions? Go ahead.</p>
+  <form class="w3-container w3-card-4 w3-padding-16">
+    <div class="w3-section">
+      <input class="w3-input" type="text" placeholder="Name" required>
+    </div>
+    <div class="w3-section">
+      <input class="w3-input" type="text" placeholder="Email" required>
+    </div>
+    <div class="w3-section">
+      <textarea class="w3-input" placeholder="Message"></textarea>
+    </div>
+    <button class="w3-button w3-black w3-margin-bottom" type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- Back to Top button -->
+<button id="scrollBtn" class="w3-button w3-theme"><i class="fa fa-arrow-up"></i></button>
+
+<!-- Modal -->
+<div id="customModal" class="w3-modal">
+  <div class="w3-modal-content w3-card-4">
+    <header class="w3-container w3-teal">
+      <span id="closeModal" class="w3-button w3-display-topright">&times;</span>
+      <h2>Hello!</h2>
+    </header>
+    <div class="w3-container">
+      <p>This modal can be opened and closed using TypeScript.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Load compiled script -->
+<script src="dist/script.js"></script>
+</body>
+</html>
